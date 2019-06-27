@@ -797,7 +797,6 @@ a {
         margin-top: .7em;
         margin-bottom: .8rem;
         text-align: center;
-
     }
 
 @media (min-width: 530px) {
@@ -806,6 +805,5 @@ a {
             margin-top: 1em;
             font-size: 1.875rem;
             text-align: left
-
     }
     }
