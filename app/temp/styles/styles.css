@@ -1104,6 +1104,7 @@ Instead edit gulp/templates/sprite
 
 .site-header__logo__graphic {
         text-indent: -9999px;
+        height: 58.53px
     }
 
 .primary-nav--pull-right {
