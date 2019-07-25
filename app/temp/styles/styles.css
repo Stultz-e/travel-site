@@ -1095,7 +1095,13 @@ Instead edit gulp/templates/sprite
     position: absolute;
     width: 100%;
     z-index: 2;
+    -webkit-transition: background-color .3s ease-out;
+    transition: background-color .3s ease-out;
 }
+
+.site-header--is-expanded {
+        background-color: rgba(47,85,114, .55);
+    }
 
 @media (min-width: 800px) {
 
@@ -1104,8 +1110,11 @@ Instead edit gulp/templates/sprite
 }
     }
 
+@media (min-width: 800px) {
+
 .site-header__btn-container {
-        float: right;
+            float: right
+    }
     }
 
 .site-header__logo {
@@ -1118,19 +1127,6 @@ Instead edit gulp/templates/sprite
                 transform-origin: top;
         background-color: #2f5572;
         padding: 25px 36px;
-        -webkit-transform: translateX(-50%) scale(.8);
-                transform: translateX(-50%) scale(.8);
-        -webkit-transform-origin: 50%  0;
-                transform-origin: 50%  0;
-    }
-
-@media (min-width: 800px) {
-
-.site-header__logo {
-            left: auto;
-            -webkit-transform: translateX(0);
-                    transform: translateX(0)
-    }
     }
 
 @media (min-width: 800px) {
@@ -1164,33 +1160,31 @@ Instead edit gulp/templates/sprite
     }
 
 .site-header__menu-content {
-        display: none;
+        opacity: 0;
+        padding-top: 100px;
+        text-align: center;
     }
 
 @media (min-width: 800px) {
 
 .site-header__menu-content {
-            display: block
+            display: block;
+            padding-top: 0
     }
     }
 
-.site-header__menu-content {
-        display: none;
-    }
-
-@media (min-width: 800px) {
-
-.site-header__menu-content {
-            display: block
-    }
-    }
+.site-header__menu-content--is-visible {
+            display: block;
+        }
 
 .site-header .icon--clear-view-escapes {
         height: 58.53px;
     }
 
-.primary-nav--pull-right {
-        float: right;
+@media (min-width: 800px) {
+        .primary-nav--pull-right {
+            float: right;
+        }
     }
 
 .primary-nav ul {
@@ -1205,9 +1199,29 @@ Instead edit gulp/templates/sprite
     }
 
 .primary-nav li {
+        display: inline-block;
         list-style: none;
-        float: left;
-        padding-right: 20px;
+        padding-right: 7px;
+    }
+
+@media (min-width: 800px) {
+
+.primary-nav li {
+            float: left;
+            display: block;
+            padding-right: 20px
+    }
+    }
+
+.primary-nav li li:last-child {
+            padding-right: 0;
+        }
+
+@media (min-width: 800px) {
+
+.primary-nav li li:last-child {
+                padding-right: 20px
+        }
     }
 
 .primary-nav a {

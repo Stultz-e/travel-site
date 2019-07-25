@@ -1,7 +1,8 @@
 .primary-nav {
-
-    &--pull-right {
-        float: right;
+    @mixin atMedium {
+        &--pull-right {
+            float: right;
+        }
     }
 
     ul {
@@ -11,9 +12,22 @@
     }
 
     li {
+        display: inline-block;
         list-style: none;
-        float: left;
-        padding-right: 20px;
+        padding-right: 7px;
+
+        @mixin atMedium {
+            float: left;
+            display: block;
+            padding-right: 20px;
+        }
+
+        li:last-child {
+            padding-right: 0;
+            @mixin atMedium {
+                padding-right: 20px;
+            }
+        }
     }
 
     a {
