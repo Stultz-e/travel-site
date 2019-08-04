@@ -1329,10 +1329,14 @@ Instead edit gulp/templates/sprite
 
 .reveal-item {
     opacity: 0;
-    -webkit-transition: opacity .3s ease-in;
-    transition: opacity .3s ease-in;
+    -webkit-transition: all 1.5s ease-in;
+    transition: all 1.5s ease-in;
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15);
 }
 
 .reveal-item--is-visible {
         opacity: 1;
+        -webkit-transform: scale(1);
+                transform: scale(1);
     }

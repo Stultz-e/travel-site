@@ -10690,10 +10690,9 @@ var _jquery2 = _interopRequireDefault(_jquery);
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var mobileMenu = new _MobileMenu2.default();
-var revealOnScroll = new _RevealOnScroll2.default();
 
 new _RevealOnScroll2.default((0, _jquery2.default)(".feature-item"), "85%");
-new _RevealOnScroll2.default(".testimonial", x);
+new _RevealOnScroll2.default((0, _jquery2.default)(".testimonial"), "60%");
 
 /***/ }),
 /* 2 */
@@ -10789,7 +10788,6 @@ var RevealOnScroll = function () {
         key: 'createWaypoints',
         value: function createWaypoints() {
             this.itemsToReveal.each(function () {
-                /* alert("testing"); */
                 var currentItem = this;
                 new Waypoint({
                     element: currentItem,
