@@ -572,12 +572,6 @@ a {
     max-width: 1236px;
     margin-left: auto;
     margin-right: auto;
-
-/*     .wrapper {
-        padding-left: 0;
-        padding-right: 0;
-    } */
-
 }
 
 .wrapper--medium {
@@ -889,6 +883,7 @@ a {
 
 .section-title--less-margin {
         margin-bottom: 1.3rem;
+        margin-top: 0;
     }
 
 .section-title__icon {
@@ -1375,7 +1370,28 @@ Instead edit gulp/templates/sprite
     bottom: 0;
     left: 0;
     right: 0;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+    -webkit-transition: all .3s ease-out;
+    transition: all .3s ease-out;
 }
+
+.modal--is-visible {
+        opacity: 1;
+        visibility: visible;
+        -webkit-transform: scale(1);
+                transform: scale(1);
+    }
+
+.modal__inner {
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        -webkit-transform: translateY(-50%);
+                transform: translateY(-50%);
+    }
 
 .modal__description {
         text-align: center;
@@ -1393,7 +1409,13 @@ Instead edit gulp/templates/sprite
                 transform: scaleX(1.2);
         -webkit-transform-origin: 100% 0;
                 transform-origin: 100% 0;
+        color: #2f5572;
+        cursor: pointer;
     }
+
+.modal__close:hover {
+            color: #d59541;
+        }
 
 .social-icons {
     text-align: center;
